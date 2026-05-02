@@ -3,7 +3,6 @@ export interface IconProject {
   slug: string;
   name: string;
   tagline: string;
-  year: string;
   tools: string[];
   description: string;
   motivation: string;
@@ -22,7 +21,6 @@ export const iconProjects: IconProject[] = [
     slug: "calculator",
     name: "Calculator",
     tagline: "Turning math into memory.",
-    year: "2024",
     tools: ["Aseprite", "32×32px"],
     description:
       "The calculator is one of the most iconic utility apps ever made. Its minimal interface — buttons, a display, a dark body — has been redesigned hundreds of times. But I wanted to strip it all the way back to where it all started: early digital displays, pixel fonts, and chunky buttons.",
@@ -42,7 +40,6 @@ export const iconProjects: IconProject[] = [
     slug: "chess",
     name: "Chess",
     tagline: "Sixty-four squares. Infinite strategy.",
-    year: "2024",
     tools: ["Aseprite", "32×32px"],
     description:
       "Chess is a game of patterns, strategy, and geometry. The grid-based nature of pixel art felt like a perfect mirror for the chessboard itself — both systems built entirely on squares. This redesign was less about the app and more about the game's visual DNA.",
@@ -62,7 +59,6 @@ export const iconProjects: IconProject[] = [
     slug: "clock",
     name: "Clock",
     tagline: "Every second, counted.",
-    year: "2024",
     tools: ["Aseprite", "32×32px"],
     description:
       "Time is precise. Pixel art is precise. They were made for each other. The analog clock face is one of the oldest and most universal interfaces in human history — and one of the most challenging to recreate at a micro scale.",
@@ -82,7 +78,6 @@ export const iconProjects: IconProject[] = [
     slug: "contacts",
     name: "Contacts",
     tagline: "A person, in pixels.",
-    year: "2024",
     tools: ["Aseprite", "32×32px"],
     description:
       "The Contacts app icon has always been about the human silhouette — a face, a head, a person. The challenge of pixel art is to carry that humanity through in dozens of pixels rather than thousands. The result is something more abstracted, yet somehow more personal.",
@@ -102,7 +97,6 @@ export const iconProjects: IconProject[] = [
     slug: "mail",
     name: "Mail",
     tagline: "The envelope. Reimagined.",
-    year: "2024",
     tools: ["Aseprite", "32×32px"],
     description:
       "The envelope is perhaps the oldest digital icon metaphor still in active use. It predates the web, predates smartphones — it's been on screens since the first email clients. Bringing it into pixel art was both a tribute and a deconstruction.",
@@ -122,7 +116,6 @@ export const iconProjects: IconProject[] = [
     slug: "ms-todo",
     name: "MS To-Do",
     tagline: "The pixel perfect check.",
-    year: "2024",
     tools: ["Aseprite", "32×32px"],
     description:
       "A checkmark is one of the simplest, most universally understood symbols. Done. Complete. Finished. In Microsoft's To-Do, it anchors the entire identity. Recreating it in pixel art forced me to think about where a checkmark actually lives and what makes it satisfying.",
@@ -142,7 +135,6 @@ export const iconProjects: IconProject[] = [
     slug: "notes",
     name: "Notes",
     tagline: "Lines on yellow. Simple as that.",
-    year: "2024",
     tools: ["Aseprite", "32×32px"],
     description:
       "Notes is one of Apple's most minimalist icons — a yellow notepad with ruled lines. At 32×32, the concept doesn't change, but the execution requires radical simplification. Every line must earn its place.",
@@ -162,7 +154,6 @@ export const iconProjects: IconProject[] = [
     slug: "notion",
     name: "Notion",
     tagline: "The N. Bold and structural.",
-    year: "2024",
     tools: ["Aseprite", "32×32px"],
     description:
       "Notion's identity is built around a single letterform — a serif N on a white background. It's deceptively simple. At 32×32, every pixel of that letterform carries structural weight, and the geometry of a bold N becomes almost architectural.",
@@ -182,7 +173,6 @@ export const iconProjects: IconProject[] = [
     slug: "terminal",
     name: "Terminal",
     tagline: "The blinking cursor. The beginning of everything.",
-    year: "2024",
     tools: ["Aseprite", "32×32px"],
     description:
       "The terminal is where code lives. It's the oldest persistent interface in computing — a black screen, a prompt, a blinking cursor. Designing a pixel art terminal icon felt like returning to the source: this is where pixel art and computing were born.",
@@ -202,7 +192,6 @@ export const iconProjects: IconProject[] = [
     slug: "vs-code",
     name: "VS Code",
     tagline: "The editor, distilled.",
-    year: "2024",
     tools: ["Aseprite", "32×32px"],
     description:
       "VS Code's icon is one of the most distinctive in software — an abstract arrangement of blue squares that somehow communicates 'text editor'. Translating that into pixel art was an exploration of how iconography survives reduction and how brand identity persists even at the lowest resolution.",
@@ -222,7 +211,6 @@ export const iconProjects: IconProject[] = [
     slug: "x",
     name: "X (Twitter)",
     tagline: "X marks the pixel.",
-    year: "2024",
     tools: ["Aseprite", "32×32px"],
     description:
       "When Twitter became X, the design world changed overnight. The clean, rounded bird was replaced by a stark, geometric X on black. Love it or hate it, it's one of the most dramatic rebrands in tech history — and one that lends itself perfectly to pixel art.",
@@ -242,7 +230,6 @@ export const iconProjects: IconProject[] = [
     slug: "youtube",
     name: "YouTube",
     tagline: "Play. In 32 pixels.",
-    year: "2024",
     tools: ["Aseprite", "32×32px"],
     description:
       "The YouTube play button is one of the most recognized symbols in digital culture. Billions of plays. Trillions of views. And at its core, just a red rounded rectangle with a white triangle. In pixel art, that simplicity becomes its superpower.",
