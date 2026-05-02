@@ -186,7 +186,7 @@ function LeftArea() {
   return (
     <div className="content-stretch flex flex-[1_0_0] items-center justify-center min-w-px overflow-clip pb-[35.886px] pt-[49.688px] relative" data-name="Left Area">
       <div className="content-stretch flex flex-col items-start relative shrink-0" data-name="🧩 Status Bar › Time">
-        <p className="font-['SF_Pro:Semibold',sans-serif] font-[590] leading-[175.264px] relative shrink-0 text-[137.16px] text-center text-white tracking-[-1.2146px] whitespace-nowrap" style={{ fontVariationSettings: "'wdth' 100" }}>
+        <p className="font-['SF_Pro:Semibold',sans-serif] font-[590] leading-[80.66px] relative shrink-0 text-[63.15px] text-center text-white tracking-[-0.56px] whitespace-nowrap" style={{ fontVariationSettings: "'wdth' 100" }}>
           1:47
         </p>
       </div>
