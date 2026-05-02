@@ -348,16 +348,14 @@ function StatusBar() {
 
 function Logo4() {
   return (
-    <div className="overflow-clip relative rounded-[38.647px] shrink-0 size-[176.67px]" data-name="Logo">
-      <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[38.647px] size-full" src={imgLogo4} />
-    </div>
+    <div className="overflow-clip relative rounded-[38.647px] shrink-0 size-[176.67px]" data-name="Logo" />
   );
 }
 
-function HasName() {
+function HasName({ firstAppLabel }: { firstAppLabel: string }) {
   return (
     <div className="content-stretch flex flex-col items-start relative shrink-0" data-name="Has Name">
-      <p className="font-['SF_Pro_Display:Regular',sans-serif] leading-[44.167px] not-italic relative shrink-0 text-[33.126px] text-center text-white whitespace-nowrap">Pages</p>
+      <p className="font-['SF_Pro_Display:Regular',sans-serif] leading-[44.167px] not-italic relative shrink-0 text-[33.126px] text-center text-white whitespace-nowrap">{firstAppLabel}</p>
     </div>
   );
 }
@@ -737,13 +735,13 @@ function LogoAndText14() {
   );
 }
 
-function MainHomescreen({ notesAppLabel }: { notesAppLabel: string }) {
+function MainHomescreen({ notesAppLabel, firstAppLabel }: { notesAppLabel: string; firstAppLabel: string }) {
   return (
     <div className="absolute content-center flex flex-wrap gap-[112px_93px] items-center left-[97px] top-[260px] w-[985.679px]" data-name="Main Homescreen">
       <div className="content-stretch flex flex-col items-start relative shrink-0" data-name=".Home Screen App">
         <div className="content-stretch flex flex-col gap-[11.042px] items-center relative shrink-0 size-[176.67px]" data-name="Logo and Text">
           <Logo4 />
-          <HasName />
+          <HasName firstAppLabel={firstAppLabel} />
         </div>
       </div>
       <div className="content-stretch flex flex-col items-start relative shrink-0" data-name=".Home Screen App">
@@ -795,22 +793,22 @@ function MainHomescreen({ notesAppLabel }: { notesAppLabel: string }) {
   );
 }
 
-function HomeScreen({ notesAppLabel }: { notesAppLabel: string }) {
+function HomeScreen({ notesAppLabel, firstAppLabel }: { notesAppLabel: string; firstAppLabel: string }) {
   return (
     <div className="absolute h-[2572.753px] left-[28px] overflow-clip top-[12px] w-[1187px]" data-name="📱 Home Screen">
       <Bottom />
       <StatusBar />
-      <MainHomescreen notesAppLabel={notesAppLabel} />
+      <MainHomescreen notesAppLabel={notesAppLabel} firstAppLabel={firstAppLabel} />
     </div>
   );
 }
 
-function Component4BorderPrimary({ notesAppLabel }: { notesAppLabel: string }) {
+function Component4BorderPrimary({ notesAppLabel, firstAppLabel }: { notesAppLabel: string; firstAppLabel: string }) {
   return (
     <div className="absolute inset-[14px_9px_11px_11px] rounded-[199px]" data-name="4-border-primary">
       <div aria-hidden="true" className="absolute border-8 border-[#363135] border-solid inset-[-8px] pointer-events-none rounded-[207px]" />
       <DynamicIsland />
-      <HomeScreen notesAppLabel={notesAppLabel} />
+      <HomeScreen notesAppLabel={notesAppLabel} firstAppLabel={firstAppLabel} />
     </div>
   );
 }
@@ -883,12 +881,12 @@ function Buttons() {
   );
 }
 
-export default function Iphone({ notesAppLabel = "Notes" }: { notesAppLabel?: string }) {
+export default function Iphone({ notesAppLabel = "Notes", firstAppLabel = "Pages" }: { notesAppLabel?: string; firstAppLabel?: string }) {
   return (
     <div className="blur-[0.504px] relative rounded-[203px] size-full" data-name="Iphone 19">
       <div aria-hidden="true" className="absolute border-18 border-[#5465a5] border-solid inset-[-9px] pointer-events-none rounded-[212px]" />
       <Frame />
-      <Component4BorderPrimary notesAppLabel={notesAppLabel} />
+      <Component4BorderPrimary notesAppLabel={notesAppLabel} firstAppLabel={firstAppLabel} />
       <Buttons />
     </div>
   );
