@@ -346,22 +346,10 @@ function StatusBar() {
   );
 }
 
-function Group() {
-  return (
-    <div className="absolute contents font-['Wave_Spurs:Clean',sans-serif] leading-[normal] left-[15.05px] not-italic text-[#4e3000] text-[140.244px] top-[12.81px] whitespace-nowrap">
-      <p className="absolute left-[15.05px] top-[12.81px]">H-</p>
-      <p className="absolute left-[116.96px] top-[12.81px]">A</p>
-    </div>
-  );
-}
-
 function Logo4() {
   return (
     <div className="overflow-clip relative rounded-[38.647px] shrink-0 size-[176.67px]" data-name="Logo">
       <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[38.647px] size-full" src={imgLogo4} />
-      <div className="-translate-x-1/2 -translate-y-1/2 absolute bg-[#ff9d00] left-[calc(50%+0.16px)] overflow-clip size-[186.992px] top-[calc(50%+0.16px)]" data-name="Logo Asset">
-        <Group />
-      </div>
     </div>
   );
 }
@@ -369,7 +357,7 @@ function Logo4() {
 function HasName() {
   return (
     <div className="content-stretch flex flex-col items-start relative shrink-0" data-name="Has Name">
-      <p className="font-['SF_Pro_Display:Regular',sans-serif] leading-[44.167px] not-italic relative shrink-0 text-[33.126px] text-center text-white whitespace-nowrap">Habib App</p>
+      <p className="font-['SF_Pro_Display:Regular',sans-serif] leading-[44.167px] not-italic relative shrink-0 text-[33.126px] text-center text-white whitespace-nowrap">Pages</p>
     </div>
   );
 }
@@ -482,19 +470,19 @@ function Logo9() {
   );
 }
 
-function HasName5() {
+function HasName5({ notesAppLabel }: { notesAppLabel: string }) {
   return (
     <div className="content-stretch flex flex-col items-start relative shrink-0" data-name="Has Name">
-      <p className="font-['SF_Pro_Display:Regular',sans-serif] leading-[44.167px] not-italic relative shrink-0 text-[33.126px] text-center text-white whitespace-nowrap">Notes</p>
+      <p className="font-['SF_Pro_Display:Regular',sans-serif] leading-[44.167px] not-italic relative shrink-0 text-[33.126px] text-center text-white whitespace-nowrap">{notesAppLabel}</p>
     </div>
   );
 }
 
-function LogoAndText4() {
+function LogoAndText4({ notesAppLabel }: { notesAppLabel: string }) {
   return (
     <div className="content-stretch flex flex-col gap-[11.042px] items-center relative shrink-0 size-[176.67px]" data-name="Logo and Text">
       <Logo9 />
-      <HasName5 />
+      <HasName5 notesAppLabel={notesAppLabel} />
     </div>
   );
 }
@@ -749,7 +737,7 @@ function LogoAndText14() {
   );
 }
 
-function MainHomescreen() {
+function MainHomescreen({ notesAppLabel }: { notesAppLabel: string }) {
   return (
     <div className="absolute content-center flex flex-wrap gap-[112px_93px] items-center left-[97px] top-[260px] w-[985.679px]" data-name="Main Homescreen">
       <div className="content-stretch flex flex-col items-start relative shrink-0" data-name=".Home Screen App">
@@ -771,7 +759,7 @@ function MainHomescreen() {
         <LogoAndText3 />
       </div>
       <div className="content-stretch flex flex-col items-start relative shrink-0" data-name=".Home Screen App">
-        <LogoAndText4 />
+        <LogoAndText4 notesAppLabel={notesAppLabel} />
       </div>
       <div className="content-stretch flex flex-col items-start relative shrink-0" data-name=".Home Screen App">
         <LogoAndText5 />
@@ -807,22 +795,22 @@ function MainHomescreen() {
   );
 }
 
-function HomeScreen() {
+function HomeScreen({ notesAppLabel }: { notesAppLabel: string }) {
   return (
     <div className="absolute h-[2572.753px] left-[28px] overflow-clip top-[12px] w-[1187px]" data-name="📱 Home Screen">
       <Bottom />
       <StatusBar />
-      <MainHomescreen />
+      <MainHomescreen notesAppLabel={notesAppLabel} />
     </div>
   );
 }
 
-function Component4BorderPrimary() {
+function Component4BorderPrimary({ notesAppLabel }: { notesAppLabel: string }) {
   return (
     <div className="absolute inset-[14px_9px_11px_11px] rounded-[199px]" data-name="4-border-primary">
       <div aria-hidden="true" className="absolute border-8 border-[#363135] border-solid inset-[-8px] pointer-events-none rounded-[207px]" />
       <DynamicIsland />
-      <HomeScreen />
+      <HomeScreen notesAppLabel={notesAppLabel} />
     </div>
   );
 }
@@ -895,12 +883,12 @@ function Buttons() {
   );
 }
 
-export default function Iphone() {
+export default function Iphone({ notesAppLabel = "Notes" }: { notesAppLabel?: string }) {
   return (
     <div className="blur-[0.504px] relative rounded-[203px] size-full" data-name="Iphone 19">
       <div aria-hidden="true" className="absolute border-18 border-[#5465a5] border-solid inset-[-9px] pointer-events-none rounded-[212px]" />
       <Frame />
-      <Component4BorderPrimary />
+      <Component4BorderPrimary notesAppLabel={notesAppLabel} />
       <Buttons />
     </div>
   );

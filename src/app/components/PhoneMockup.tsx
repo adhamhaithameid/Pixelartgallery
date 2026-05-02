@@ -72,11 +72,11 @@ export function PhoneMockup({ iconSrc, iconName }: PhoneMockupProps) {
           transformOrigin: "top left",
         }}
       >
-        <Iphone19 />
+        <Iphone19 notesAppLabel={iconName === "Notes" ? "not that one 😂" : undefined} />
       </div>
 
       {/*
-       * Pixel-art icon overlay — sits over Logo4 (Habib App, row 0, col 0).
+       * Pixel-art icon overlay — sits over Logo4 (Pages icon, row 0, col 0).
        * z-index 10 puts it above the scaled phone layer.
        */}
       <div
@@ -89,7 +89,7 @@ export function PhoneMockup({ iconSrc, iconName }: PhoneMockupProps) {
           borderRadius: OV_R,
           overflow:     "hidden",
           zIndex:       10,
-          boxShadow:    "0 0 0 1px rgba(255,255,255,0.7), 0 3px 12px rgba(0,0,0,0.55)",
+          boxShadow:    "0 3px 12px rgba(0,0,0,0.55)",
         }}
       >
         <img
