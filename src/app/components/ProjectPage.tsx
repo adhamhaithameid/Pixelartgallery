@@ -1,19 +1,19 @@
+import { useEffect, type CSSProperties } from "react";
 import { Link, useParams } from "react-router";
 import { iconProjects } from "./iconData";
-import type { CSSProperties } from "react";
 
-import calculatorPage from "../../assets/project-pages/calculator-page.png";
-import chessPage from "../../assets/project-pages/chess-page.png";
-import clockPage from "../../assets/project-pages/clock-page.png";
-import contactsPage from "../../assets/project-pages/contacts-page.png";
-import mailPage from "../../assets/project-pages/mail-page.png";
-import msTodoPage from "../../assets/project-pages/ms-todo-page.png";
-import notesPage from "../../assets/project-pages/notes-page.png";
-import notionPage from "../../assets/project-pages/notion-page.png";
-import terminalPage from "../../assets/project-pages/terminal-page.png";
-import vsCodePage from "../../assets/project-pages/vs-code-page.png";
-import xPage from "../../assets/project-pages/x-page.png";
-import youtubePage from "../../assets/project-pages/youtube-page.png";
+import calculatorPage from "../../assets/project-pages/calculator-page.webp";
+import chessPage from "../../assets/project-pages/chess-page.webp";
+import clockPage from "../../assets/project-pages/clock-page.webp";
+import contactsPage from "../../assets/project-pages/contacts-page.webp";
+import mailPage from "../../assets/project-pages/mail-page.webp";
+import msTodoPage from "../../assets/project-pages/ms-todo-page.webp";
+import notesPage from "../../assets/project-pages/notes-page.webp";
+import notionPage from "../../assets/project-pages/notion-page.webp";
+import terminalPage from "../../assets/project-pages/terminal-page.webp";
+import vsCodePage from "../../assets/project-pages/vs-code-page.webp";
+import xPage from "../../assets/project-pages/x-page.webp";
+import youtubePage from "../../assets/project-pages/youtube-page.webp";
 
 const projectPageImages: Record<string, string> = {
   calculator: calculatorPage,
@@ -69,6 +69,12 @@ export default function ProjectPage() {
   const nextProject = iconProjects[index + 1] ?? null;
   const projectImage = projectPageImages[project.slug];
 
+  useEffect(() => {
+    if (!nextProject) return;
+    const nextImage = new Image();
+    nextImage.src = projectPageImages[nextProject.slug];
+  }, [nextProject]);
+
   return (
     <div
       style={{
@@ -82,6 +88,10 @@ export default function ProjectPage() {
         <img
           src={projectImage}
           alt={`${project.name} page`}
+          width={1099}
+          height={813}
+          decoding="async"
+          fetchPriority="high"
           style={{
             width: "100%",
             height: "auto",
