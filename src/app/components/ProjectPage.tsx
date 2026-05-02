@@ -21,7 +21,7 @@ export default function ProjectPage() {
 
   return (
     <div style={{ backgroundColor: "#0c0c14", minHeight: "100vh", fontFamily: "Inter, sans-serif" }}>
-      <BehanceCoverPage
+      <ProjectCoverPage
         project={project}
         iconSrc={iconImages[project.imageKey]}
         index={index}
@@ -81,12 +81,12 @@ export default function ProjectPage() {
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
-// The Behance cover page — matches the Figma design exactly:
+// The project cover page — matches the Figma design exactly:
 //   • Very dark background (#0c0c14)
 //   • Left side: large icon + badge + huge title + tagline + meta row
 //   • Right side: iPhone mockup (IphoneTopLeft-2 scaled to 236px)
 // ─────────────────────────────────────────────────────────────────────────────
-function BehanceCoverPage({
+function ProjectCoverPage({
   project,
   iconSrc,
   index,
@@ -177,7 +177,7 @@ function BehanceCoverPage({
             />
           </div>
 
-          {/* Badge — "PIXEL ART ICON · 2024" */}
+          {/* Badge — "PIXEL ART ICON" */}
           <div
             style={{
               display: "inline-flex",
@@ -240,7 +240,7 @@ function BehanceCoverPage({
             {project.tagline}
           </p>
 
-          {/* Meta row — Tool / Size / Type  (Year removed) */}
+          {/* Meta row — Tool / Size / Type */}
           <div
             style={{
               display: "flex",

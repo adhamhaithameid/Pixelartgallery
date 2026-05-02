@@ -31,30 +31,6 @@ export const iconImages: Record<string, string> = {
 export default function Home() {
   return (
     <div style={{ backgroundColor: "#0c0c14", minHeight: "100vh", fontFamily: "Inter, sans-serif" }}>
-
-      {/* ─── NAV ─── */}
-      <nav style={{
-        position: "sticky", top: 0, zIndex: 50,
-        borderBottom: "1px solid rgba(255,255,255,0.06)",
-        backgroundColor: "rgba(12,12,20,0.95)",
-        backdropFilter: "blur(16px)",
-      }}>
-        <div style={{ maxWidth: 1400, margin: "0 auto", padding: "0 64px", height: 64, display: "flex", alignItems: "center", justifyContent: "space-between" }}>
-          <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
-            <div style={{ width: 32, height: 32, backgroundColor: "#1769ff", borderRadius: 4, display: "flex", alignItems: "center", justifyContent: "center" }}>
-              <span style={{ color: "#fff", fontSize: 13, fontWeight: 900, letterSpacing: "-0.5px", fontFamily: "Inter, sans-serif" }}>Bē</span>
-            </div>
-            <span style={{ fontSize: 13, color: "rgba(255,255,255,0.3)", fontWeight: 500 }}>pixel.art</span>
-          </div>
-          <div style={{ display: "flex", gap: 8 }}>
-            <div style={{ height: 32, width: 1, backgroundColor: "rgba(255,255,255,0.08)" }} />
-            <button style={{ fontSize: 13, fontWeight: 700, color: "#fff", backgroundColor: "#1769ff", border: "none", borderRadius: 4, padding: "8px 18px", cursor: "pointer" }}>
-              Follow
-            </button>
-          </div>
-        </div>
-      </nav>
-
       {/* ─── HERO ─── */}
       <div style={{
         maxWidth: 1400, margin: "0 auto", padding: "80px 64px 72px",
@@ -79,7 +55,7 @@ export default function Home() {
             }}>
               <div style={{ width: 6, height: 6, borderRadius: "50%", backgroundColor: "#1769ff" }} />
               <span style={{ fontSize: 10, fontWeight: 700, color: "#6fa3ff", letterSpacing: "1.317px", textTransform: "uppercase" }}>
-                Featured Project · 2024
+                Featured Project
               </span>
             </div>
 
@@ -96,7 +72,7 @@ export default function Home() {
             </p>
 
             <div style={{ display: "flex", gap: 40 }}>
-              {[["12", "Icons"], ["32×32", "Resolution"], ["Aseprite", "Tool"], ["2024", "Year"]].map(([val, label]) => (
+              {[["12", "Icons"], ["32×32", "Resolution"], ["Aseprite", "Tool"]].map(([val, label]) => (
                 <div key={label}>
                   <div style={{ fontFamily: "Inter, sans-serif", fontWeight: 900, fontSize: 26, color: "#fff", letterSpacing: "-0.5px" }}>{val}</div>
                   <div style={{ fontSize: 10, color: "#555", marginTop: 4, textTransform: "uppercase", letterSpacing: "1.117px" }}>{label}</div>
@@ -155,19 +131,6 @@ export default function Home() {
           {iconProjects.map((project, i) => (
             <ProjectCard key={project.slug} project={project} index={i} />
           ))}
-        </div>
-      </div>
-
-      {/* ─── FOOTER ─── */}
-      <div style={{ borderTop: "1px solid rgba(255,255,255,0.05)" }}>
-        <div style={{ maxWidth: 1400, margin: "0 auto", padding: "24px 64px", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
-          <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
-            <div style={{ width: 24, height: 24, backgroundColor: "#1769ff", borderRadius: 3, display: "flex", alignItems: "center", justifyContent: "center" }}>
-              <span style={{ color: "#fff", fontSize: 9, fontWeight: 900 }}>Bē</span>
-            </div>
-            <span style={{ fontSize: 12, color: "#333" }}>Pixel Art Icon Pack · 2024</span>
-          </div>
-          <span style={{ fontSize: 12, color: "#333" }}>Made with Aseprite · 32×32px</span>
         </div>
       </div>
     </div>
@@ -241,7 +204,6 @@ function ProjectCard({ project, index }: { project: (typeof iconProjects)[0]; in
         <div style={{ padding: "18px 20px 20px" }}>
           <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 6 }}>
             <h3 style={{ fontFamily: "Inter, sans-serif", fontWeight: 800, fontSize: 16, color: "#fff", margin: 0, letterSpacing: "-0.3px" }}>{project.name}</h3>
-            <span style={{ fontSize: 11, color: "#333", fontWeight: 500 }}>{project.year}</span>
           </div>
           <p style={{ fontSize: 12, color: "rgba(255,255,255,0.25)", margin: "0 0 14px", lineHeight: 1.5 }}>{project.tagline}</p>
           <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
